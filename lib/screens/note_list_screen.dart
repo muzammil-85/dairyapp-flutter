@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:dairy/helper/note_provider.dart';
-import 'package:dairy/screens/note_edit_screen.dart';
-import 'package:dairy/utils/constants.dart';
-import 'package:dairy/widgets/list_item.dart';
+import 'package:buddy/helper/note_provider.dart';
+import 'package:buddy/screens/note_edit_screen.dart';
+import 'package:buddy/utils/constants.dart';
+import 'package:buddy/widgets/list_item.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 

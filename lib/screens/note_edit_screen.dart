@@ -2,10 +2,10 @@ import 'dart:io';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:dairy/helper/note_provider.dart';
-import 'package:dairy/models/note.dart';
-import 'package:dairy/utils/constants.dart';
-import 'package:dairy/widgets/delete_popup.dart';
+import 'package:buddy/helper/note_provider.dart';
+import 'package:buddy/models/note.dart';
+import 'package:buddy/utils/constants.dart';
+import 'package:buddy/widgets/delete_popup.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -24,13 +24,13 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
   final titleController = TextEditingController();
   final contentController = TextEditingController();
 
-   File _image;
+  File _image;
 
   final picker = ImagePicker();
 
   bool firstTime = true;
-   Note selectedNote;
-   int id;
+  Note selectedNote;
+  int id;
 
   @override
   void didChangeDependencies() {
@@ -69,7 +69,6 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: background,
-      
       appBar: AppBar(
         elevation: 0.7,
         backgroundColor: white,
@@ -214,9 +213,8 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
     String title = titleController.text.trim();
     String content = contentController.text.trim();
 
-    
     // ignore: unnecessary_null_comparison, prefer_null_aware_operators
-    String imagePath = _image != null? _image.path : null;
+    String imagePath = _image != null ? _image.path : null;
 
     if (id != null) {
       Provider.of<NoteProvider>(

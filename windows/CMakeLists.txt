@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(dairy LANGUAGES CXX)
+project(buddy LANGUAGES CXX)
 
-set(BINARY_NAME "dairy")
+set(BINARY_NAME "buddy")
 
 cmake_policy(SET CMP0063 NEW)
 

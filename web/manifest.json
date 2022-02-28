@@ -1,6 +1,6 @@
 {
-    "name": "dairy",
-    "short_name": "dairy",
+    "name": "buddy",
+    "short_name": "buddy",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

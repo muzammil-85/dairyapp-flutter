@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:dairy/helper/database_helper.dart';
-import 'package:dairy/models/note.dart';
-import 'package:dairy/utils/constants.dart';
+import 'package:buddy/helper/database_helper.dart';
+import 'package:buddy/models/note.dart';
+import 'package:buddy/utils/constants.dart';
 
 class NoteProvider with ChangeNotifier {
   List _items = [];

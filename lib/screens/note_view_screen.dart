@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:dairy/helper/note_provider.dart';
-import 'package:dairy/models/note.dart';
-import 'package:dairy/utils/constants.dart';
-import 'package:dairy/widgets/delete_popup.dart';
+import 'package:buddy/helper/note_provider.dart';
+import 'package:buddy/models/note.dart';
+import 'package:buddy/utils/constants.dart';
+import 'package:buddy/widgets/delete_popup.dart';
 import 'package:provider/provider.dart';
 
 import 'note_edit_screen.dart';
@@ -60,7 +60,6 @@ class _NoteViewScreenState extends State<NoteViewScreen> {
         ],
       ),
       body: SingleChildScrollView(
-        
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

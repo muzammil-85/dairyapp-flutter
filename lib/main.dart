@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dairy/screens/note_view_screen.dart';
+import 'package:buddy/screens/note_view_screen.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:provider/provider.dart';
 
@@ -8,12 +8,10 @@ import 'screens/note_edit_screen.dart';
 import 'screens/note_list_screen.dart';
 
 void main() {
-  runApp( MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  
-
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider.value(
