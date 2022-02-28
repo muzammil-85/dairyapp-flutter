@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider.value(
       value: NoteProvider(),
       child: MaterialApp(
-        title: "Flutter Notes",
+        title: "Buddy",
         debugShowCheckedModeBanner: false,
         initialRoute: '/',
         routes: {
