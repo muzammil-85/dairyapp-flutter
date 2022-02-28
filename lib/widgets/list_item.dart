@@ -1,8 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:buddy/screens/note_view_screen.dart';
-import 'package:buddy/utils/constants.dart';
+import 'package:Buddy/screens/note_view_screen.dart';
+import 'package:Buddy/utils/constants.dart';
 
 class ListItem extends StatelessWidget {
   final int id;

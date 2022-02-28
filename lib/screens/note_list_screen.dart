@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:buddy/helper/note_provider.dart';
-import 'package:buddy/screens/note_edit_screen.dart';
-import 'package:buddy/utils/constants.dart';
-import 'package:buddy/widgets/list_item.dart';
+import 'package:Buddy/helper/note_provider.dart';
+import 'package:Buddy/screens/note_edit_screen.dart';
+import 'package:Buddy/utils/constants.dart';
+import 'package:Buddy/widgets/list_item.dart';
 import 'package:provider/provider.dart';
 
 class NoteListScreen extends StatelessWidget {
@@ -79,7 +79,7 @@ class NoteListScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'BUDDY',
+              'Buddy',
               style: headerNotesStyle,
             ),
             Text(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:buddy/screens/note_view_screen.dart';
+import 'package:Buddy/screens/note_view_screen.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:provider/provider.dart';
 
@@ -27,7 +27,6 @@ class MyApp extends StatelessWidget {
           NoteViewScreen.route: (context) => NoteViewScreen(),
           NoteEditScreen.route: (context) => const NoteEditScreen(),
         },
-        
       ),
     );
   }

@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:buddy/helper/note_provider.dart';
-import 'package:buddy/models/note.dart';
-import 'package:buddy/utils/constants.dart';
-import 'package:buddy/widgets/delete_popup.dart';
+import 'package:Buddy/helper/note_provider.dart';
+import 'package:Buddy/models/note.dart';
+import 'package:Buddy/utils/constants.dart';
+import 'package:Buddy/widgets/delete_popup.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
@@ -35,7 +35,6 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
 
   @override
   void didChangeDependencies() {
-    
     super.didChangeDependencies();
 
     if (firstTime) {

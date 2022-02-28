@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(buddy LANGUAGES CXX)
+project(Buddy LANGUAGES CXX)
 
-set(BINARY_NAME "buddy")
+set(BINARY_NAME "Buddy")
 
 cmake_policy(SET CMP0063 NEW)
 
