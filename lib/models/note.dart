@@ -1,10 +1,10 @@
 import 'package:intl/intl.dart';
 
 class Note {
-  int _id;
-  String _title;
-  String _content;
-  String _imagePath;
+  final int _id;
+  final String _title;
+  final String _content;
+  final String _imagePath;
 
   Note(this._id, this._title, this._content, this._imagePath);
 

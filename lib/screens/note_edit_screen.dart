@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:buddy/helper/note_provider.dart';
@@ -15,6 +14,8 @@ import 'note_view_screen.dart';
 
 class NoteEditScreen extends StatefulWidget {
   static const route = '/edit-note';
+
+  const NoteEditScreen({Key key}) : super(key: key);
 
   @override
   _NoteEditScreenState createState() => _NoteEditScreenState();
@@ -34,7 +35,7 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
 
   @override
   void didChangeDependencies() {
-    // TODO: implement didChangeDependencies
+    
     super.didChangeDependencies();
 
     if (firstTime) {
@@ -74,26 +75,26 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
         backgroundColor: white,
         leading: IconButton(
           onPressed: () => Navigator.of(context).pop(),
-          icon: Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back),
           color: black,
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.photo_camera),
+            icon: const Icon(Icons.photo_camera),
             color: black,
             onPressed: () {
               getImage(ImageSource.camera);
             },
           ),
           IconButton(
-            icon: Icon(Icons.insert_photo),
+            icon: const Icon(Icons.insert_photo),
             color: black,
             onPressed: () {
               getImage(ImageSource.gallery);
             },
           ),
           IconButton(
-            icon: Icon(Icons.delete),
+            icon: const Icon(Icons.delete),
             color: black,
             onPressed: () {
               if (id != null) {
@@ -109,20 +110,20 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
         child: Column(
           children: [
             Padding(
-              padding: EdgeInsets.only(
+              padding: const EdgeInsets.only(
                   left: 10.0, right: 5.0, top: 10.0, bottom: 5.0),
               child: TextField(
                 controller: titleController,
                 maxLines: null,
                 textCapitalization: TextCapitalization.sentences,
                 style: createTitle,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     hintText: 'Enter Note Title', border: InputBorder.none),
               ),
             ),
             if (_image != null)
               Container(
-                padding: EdgeInsets.all(10.0),
+                padding: const EdgeInsets.all(10.0),
                 width: MediaQuery.of(context).size.width,
                 height: 250.0,
                 child: Stack(
@@ -139,11 +140,11 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: Padding(
-                        padding: EdgeInsets.all(12.0),
+                        padding: const EdgeInsets.all(12.0),
                         child: Container(
                           height: 30.0,
                           width: 30.0,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             color: Colors.white,
                           ),
@@ -153,7 +154,7 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
                                 _image = null;
                               });
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.delete,
                               size: 16.0,
                             ),
@@ -171,7 +172,7 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
                 controller: contentController,
                 maxLines: null,
                 style: createContent,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   hintText: 'Enter Something...',
                   border: InputBorder.none,
                 ),
@@ -182,12 +183,13 @@ class _NoteEditScreenState extends State<NoteEditScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          if (titleController.text.isEmpty)
+          if (titleController.text.isEmpty) {
             titleController.text = 'Untitled Note';
+          }
 
           saveNote();
         },
-        child: Icon(Icons.save),
+        child: const Icon(Icons.save),
       ),
     );
   }

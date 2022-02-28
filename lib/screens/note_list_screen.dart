@@ -5,16 +5,17 @@ import 'package:buddy/screens/note_edit_screen.dart';
 import 'package:buddy/utils/constants.dart';
 import 'package:buddy/widgets/list_item.dart';
 import 'package:provider/provider.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class NoteListScreen extends StatelessWidget {
+  const NoteListScreen({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: Provider.of<NoteProvider>(context, listen: false).getNotes(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Scaffold(
+          return const Scaffold(
             body: Center(
               child: CircularProgressIndicator(),
             ),
@@ -121,6 +122,10 @@ class NoteListScreen extends StatelessWidget {
             ),
           ],
         ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [TextButton(onPressed: () {}, child: Text('About Us'))],
+        )
       ],
     );
   }
