@@ -122,10 +122,6 @@ class NoteListScreen extends StatelessWidget {
             ),
           ],
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [TextButton(onPressed: () {}, child: Text('About Us'))],
-        )
       ],
     );
   }
