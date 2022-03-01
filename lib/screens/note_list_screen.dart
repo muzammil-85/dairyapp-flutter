@@ -63,7 +63,6 @@ class NoteListScreen extends StatelessWidget {
       },
     );
   }
-
   Widget header() {
     return GestureDetector(
       child: Container(
